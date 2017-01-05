@@ -21,7 +21,7 @@ defmodule JsonWebToken.Algorithm.Rsa do
       256
   """
   def sign(sha_bits, private_key, signing_input) do
-    validate_params(sha_bits, private_key)
+    #validate_params(sha_bits, private_key)
     :crypto.sign(:rsa, sha_bits, signing_input, private_key)
   end
 
